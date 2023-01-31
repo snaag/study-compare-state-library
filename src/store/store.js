@@ -4,5 +4,8 @@ import todoSlice from "./todoSlice";
 export const store = configureStore({
     reducer: {
         todo: todoSlice
-    }
+    },
+    middleware: getDefaultMiddleware => getDefaultMiddleware({
+        serializableCheck: false
+    })
 });
