@@ -2,10 +2,10 @@ import {createSlice} from "@reduxjs/toolkit";
 import {TodoItem} from "../domain/TodoItem";
 
 const initialState = {
-    list: [{id: 0, text: "...", isDone: true}]
+    list: []
 }
 
-let sequence = 1;
+let sequence = 0;
 
 const todoSlice = createSlice({
     name: "todo",
