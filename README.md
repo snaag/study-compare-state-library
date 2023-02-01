@@ -1,4 +1,3 @@
 # study-compare-state-library
 
-<video width="480" src="https://user-images.githubusercontent.com/42943992/215800242-ca816799-af1f-4fc6-b642-23ff992b1a22.mov" />
-
+<video src="https://user-images.githubusercontent.com/42943992/215989162-c9538bd9-ff44-41f6-90cf-267345ee8eab.mov" width="240" />
