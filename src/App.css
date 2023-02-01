@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.graph {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.block {
+  width: 30px;
+  height: 100px;
+  background: rgba(206, 206, 206, 0.39);
+  border-radius: 14px;
+}
+
+.block.done {
+  background-color: #6edc6e;
+}

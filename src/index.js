@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Statistics from "./page/Statistics/Statistics";
 import TodoList from "./page/TodoList/TodoList";
+import {RecoilRoot} from "recoil";
 
 const router = createBrowserRouter([{
     path: "/",
@@ -23,9 +24,11 @@ const router = createBrowserRouter([{
 }])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <RouterProvider router={router}>
-        <App/>
-    </RouterProvider>
+    <RecoilRoot>
+        <RouterProvider router={router}>
+            <App/>
+        </RouterProvider>
+    </RecoilRoot>
 );
 
 // If you want to start measuring performance in your app, pass a function
