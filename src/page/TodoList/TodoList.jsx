@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import TodoItem from "./TodoItem";
 import {useDispatch, useSelector} from "react-redux";
-import {addTodo} from '../../store/todoSlice';
+import {addTodo, checkTodo} from '../../store/todoSlice';
 
 const TodoList = () => {
     const list = useSelector((state) => state.todo.list);
@@ -25,6 +24,20 @@ const TodoList = () => {
                 }
             </div>
         </div>
+    );
+};
+
+const TodoItem = ({id, isDone, text}) => {
+    const dispatch = useDispatch();
+
+    return (
+        <li>
+            <input
+                defaultChecked={isDone}
+                type="checkbox"
+                onChange={() => dispatch(checkTodo(id))}/>
+            <span>{text}</span>
+        </li>
     );
 };
 

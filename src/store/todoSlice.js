@@ -17,10 +17,6 @@ const todoSlice = createSlice({
             sequence++;
             state.list = [...state.list, todoItem];
         },
-        deleteTodo(state, action) {
-            // payload = id
-            state.list = state.list.filter((todoItem) => todoItem.id !== action.payload)
-        },
         checkTodo(state, action) {
             // payload = id
             state.list = state.list.map((todoItem) => todoItem.id === action.payload ? {
