@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import {useRecoilState, useResetRecoilState} from "recoil";
-import {doneTodoListState, getDoneTodoListState, todoSelector, todoState} from "../../recoil/todoList/state";
+import {useRecoilState} from "recoil";
+import {todoState} from "../../recoil/todoList/state";
 import {TodoItem} from "../../domain/TodoItem";
-// https://talkwithcode.tistory.com/76
 
 const TodoList = () => {
     const [text, setText] = useState('');
@@ -17,8 +16,6 @@ const TodoList = () => {
         setList((prevList) => [...prevList, new TodoItem(sequence, text)]);
         setSequence(sequence + 1);
     }
-
-
 
     return (
         <div>
